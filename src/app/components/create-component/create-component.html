@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Crear Película</h2>
+
+  <div class="card">
+    <div class="card-body">
+      <form #form="ngForm">
+        <div class="mb-3">
+          <label for="cajaid" class="form-label">ID Personaje</label>
+          <input type="number" class="form-control" #cajaid name="cajaid"/>
+        </div>
+
+        <div class="mb-3">
+          <label for="cajanombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" #cajanombre name="cajanombre"/>
+        </div>
+
+        <div class="mb-3">
+          <label for="cajaimagen" class="form-label">Imagen</label>
+          <input type="text" class="form-control" #cajaimagen name="cajaimagen"/>
+        </div>
+
+        <div class="mb-3">
+          <label for="cajapelicula" class="form-label">Película</label>
+          <input type="text" class="form-control" #cajapelicula name="cajapelicula"/>
+        </div>
+
+        <button (click)="insertarPersonaje()" class="btn btn-primary">
+          Crear Personaje
+        </button>
+      </form>
+
+      @if (mensaje) {
+        <div class="alert alert-success mt-3">
+          {{ mensaje }}
+        </div>
+      }
+    </div>
+  </div>
+</div>

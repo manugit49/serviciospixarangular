@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Lista de Personajes Pixar</h2>
+    @for (personaje of arraypersonajes; track personaje) {
+        <div class="card" style="width: 18rem; margin-bottom: 10px;">
+
+            <img src="{{personaje.imagen}}" class="card-img-top" alt="..."/>
+            <div class="card-body">
+                <p class="card-text">Id: {{personaje.idPersonaje}}</p>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Nombre: {{personaje.nombre}}</p>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Película: {{personaje.pelicula}}</p>
+            </div>
+            <div style="width: 50%">
+                <a [routerLink]="['/delete', personaje.idPersonaje]"
+                    class="btn btn-danger">
+                        Eliminar
+                </a>
+            </div>
+        </div>
+    }
+</div>
+
